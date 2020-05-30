@@ -1,0 +1,53 @@
+Apresentação do NODE:
+    ☐ O que é
+    ☐ O que faz
+    ☐ Como ele faz
+
+Estruturas de Controle:
+    ☐ if() {} else {}
+    ☐ switch
+    ☐ try {} catch {}
+    ☐ for
+    ☐ for in
+    ☐ for of
+    ☐ while
+
+Sistema de Módulos:
+
+Functions e arrow functions:
+
+Objetos Literais + JSON:
+
+Callbacks:
+
+Arrays e seus métodos:
+    ☐ find
+    ☐ filter
+    ☐ map
+    ☐ reduce
+    ☐ forEach
+    
+NPM - Gerenciador de Pacotes:
+
+Arquitetura Cliente-Servidor:
+    ☐ Métodos HTTP
+    ☐ HTTP - estrutura de uma requisição/resposta
+    ☐ Express
+
+Padrão MVC com Express:
+    ☐ Estrutura MVC
+    ☐ Template Engines (Views: EJS)
+    ☐ Models (sequelize)
+    ☐ Express Generator
+
+Middlewares:
+
+Libs Importantes:
+    ☐ fs - Fyle System
+    ☐ path
+    ☐ bcrypt
+
+Sessions (express-session) e Cookies (cookie-parser):
+
+APIs:
+

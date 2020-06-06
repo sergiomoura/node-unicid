@@ -1,44 +1,46 @@
 Apresentação do NODE:
-    ☐ O que é
+    ☐ O que é: Plataforma que roda JavaScript
     ☐ O que faz
     ☐ Como ele faz
 
 Estruturas de Controle:
-    ☐ if() {} else {}
-    ☐ switch
+    ✔ if() {} else {} @done(20-05-30 11:32)
+    ✔ switch @done(20-05-30 12:03)
     ☐ try {} catch {}
-    ☐ for
-    ☐ for in
-    ☐ for of
-    ☐ while
+    ✔ for @done(20-05-30 11:30)
+    ✔ for in @done(20-05-30 11:30)
+    ✔ for of @done(20-05-30 11:30)
+    ✔ while @done(20-05-30 12:26)
 
-Sistema de Módulos:
+// Node - Aula 2 - (6/6)
+    Sistema de Módulos:
 
-Functions e arrow functions:
+    Functions e arrow functions:
 
-Objetos Literais + JSON:
+    Objetos Literais + JSON:
 
-Callbacks:
+    Callbacks:
 
-Arrays e seus métodos:
-    ☐ find
-    ☐ filter
-    ☐ map
-    ☐ reduce
-    ☐ forEach
-    
-NPM - Gerenciador de Pacotes:
+    Arrays e seus métodos:
+        ☐ find
+        ☐ filter
+        ☐ map
+        ☐ reduce
+        ☐ forEach
 
-Arquitetura Cliente-Servidor:
-    ☐ Métodos HTTP
-    ☐ HTTP - estrutura de uma requisição/resposta
-    ☐ Express
+// Node - Aula 3 - (20/6)
+    NPM - Gerenciador de Pacotes:
 
-Padrão MVC com Express:
-    ☐ Estrutura MVC
-    ☐ Template Engines (Views: EJS)
-    ☐ Models (sequelize)
-    ☐ Express Generator
+    Arquitetura Cliente-Servidor:
+        ☐ Métodos HTTP (GET/POST/PUT/DELETE/PATCH)
+        ☐ HTTP - estrutura de uma requisição/resposta
+        ☐ Express
+
+    Padrão MVC com Express:
+        ☐ Estrutura MVC
+        ☐ Template Engines (Views: EJS)
+        ☐ Models (sequelize)
+        ☐ Express Generator
 
 Middlewares:
 

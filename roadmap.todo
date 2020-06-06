@@ -1,7 +1,8 @@
 Apresentação do NODE:
-    ☐ O que é: Plataforma que roda JavaScript
-    ☐ O que faz
-    ☐ Como ele faz
+    ✔ O que é: Plataforma que roda JavaScript @done
+    ✔ O que faz @done
+    ✔ Como ele faz @done
+    ✔ Deno x Node @done
 
 Estruturas de Controle:
     ✔ if() {} else {} @done(20-05-30 11:32)
@@ -15,15 +16,16 @@ Estruturas de Controle:
 // Node - Aula 2 - (6/6)
     Sistema de Módulos:
 
-    Functions e arrow functions:
+    ✔ Functions e arrow functions: @done(20-06-06 11:19)
 
     Objetos Literais + JSON:
 
-    Callbacks:
+    ✔ Callbacks: @done(20-06-06 11:19)
 
     Arrays e seus métodos:
-        ☐ find
-        ☐ filter
+        ✔ find @done(20-06-06 12:33)
+        ☐ findIndex
+        ✔ filter @done(20-06-06 12:33)
         ☐ map
         ☐ reduce
         ☐ forEach

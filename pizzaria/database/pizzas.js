@@ -4,19 +4,22 @@ const pizzas = [
         nome: "Pepperoni",
         valor: 55.3,
         ingredientes: ["mussarela", "pepperoni", "manjericao"],
-        destaque: true
+        destaque: true,
+        img: "pepperoni.jpg"
     },
     {
-        nome: "Mussarela",
+        nome: "Marguerita",
         valor: 25,
-        ingredientes: ["mussarela"],
-        destaque: false
+        ingredientes: ["mussarela", "tomate", "manjericão"],
+        destaque: false,
+        img: "marguerita.jpg"
     },
     {
         nome: "Quatro Queijos",
         valor: 40.3,
         ingredientes: ["mussarela", "gorgonzola", "catupiry", "parmesão"],
-        destaque: false
+        destaque: false,
+        img: "quatroqueijos.jpg"
     }
 
 ];

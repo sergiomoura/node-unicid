@@ -34,12 +34,12 @@ Estruturas de Controle:
     NPM - Node Package Manager: Gerenciador de Pacotes:
 
     Arquitetura Cliente-Servidor:
-        ☐ HTTP - estrutura de uma requisição/resposta
-        ☐ Estrutura MVC
+        ✔ HTTP - estrutura de uma requisição/resposta @done(20-06-20 09:33)
+        ✔ Estrutura MVC (Padrão de Desenho de Projeto) @done(20-06-20 10:52)
         ☐ Métodos HTTP (GET/POST/PUT/DELETE/PATCH)
         ☐ Express
 
-            ☐ Configurar uma rota
+            ✔ Configurar uma rota @done(20-06-20 10:55)
             const express = require('express');
             const router = express.Router();
             router.get('',()=>{});

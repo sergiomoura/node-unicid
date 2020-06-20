@@ -4,6 +4,7 @@
   "description": "Sistema para pizzarias delivery",
   "main": "index.js",
   "scripts": {
+    "start":"nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,5 +18,8 @@
   "dependencies": {
     "@fnando/cpf": "^1.0.1",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

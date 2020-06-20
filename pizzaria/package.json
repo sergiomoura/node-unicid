@@ -1,0 +1,21 @@
+{
+  "name": "pizzaria",
+  "version": "1.0.0",
+  "description": "Sistema para pizzarias delivery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pizza",
+    "pizzaria",
+    "node",
+    "express"
+  ],
+  "author": "Sérgio Moura",
+  "license": "ISC",
+  "dependencies": {
+    "@fnando/cpf": "^1.0.1",
+    "express": "^4.17.1"
+  }
+}

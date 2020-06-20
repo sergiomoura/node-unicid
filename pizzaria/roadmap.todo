@@ -1,0 +1,111 @@
+Concluir CRUD de usuários:
+    ☐ Criar uma rota get para /adm/usuarios.
+      Essa rota deve direcionar a requisição para ocontroller UsuariosController.index
+
+    ☐ Criar o controller UsuariosController.index
+      UsuariosController.index deve carregar os usuários do arquivo database/usuarios.json
+      e passá-los para a view usuarios/index.ejs
+
+    ☐ Criar a view usuarios/index.ejs.
+      Essa view deve exibir uma tabela com todos os usuários cadastrados no sistema
+      A tabela que a view exibe deve ter, na ultima coluna, um link que, quando clicado
+      direcionará o usuário para a rota /adm/usuarios/:id/edit. Ao lado desse link também
+      deve ter um formulário com action apontando para a rota /adm/usuarios/:id.
+      Esse formulário será usado para DELETAR um usuário. Assim, ele terá um campo do tipo hidden com name="id"
+      e value igual ao id do usuário daquela linha da tabela.
+      Essa view também deve ter um link "Adicionar usuário" que direciona o visitante para
+      a rota /usuarios/create
+
+    ☐ Criar rota get para /adm/usuarios/create.
+      Essa rota deve direcionar a requisição para UsuariosController.create
+
+    ☐ Criar um controller UsuariosController.create
+      Esse controller deve retornar uma view usuarios/create.ejs
+
+    ☐ Criar uma view /adm/usuarios/create.ejs
+      Essa view deve conter um formulário que possibilite o visitante inserir dados que referentes a um usuário
+
+    ☐ Criar rota post para /adm/usuarios/store
+      Essa rota deve direcionar a requisição para o controller UsuariosController.store
+      
+    ☐ Criar um controller UsuariosController.store
+      Esse controller deve capturar as informações de um usuário a ser adicionado e adicionar esse usuário
+      ao arquivo database/usuarios.json. Após fazer isso, o controller deve direcionar o visitante para a
+      rota /usuarios
+    
+    ☐ Criar uma rota get /adm/usuarios/:id/edit
+      Essa rota deve direcionar a requisição para UsuariosController.edit
+
+    ☐ Criar um controller UsuariosController.edit
+      Esse controller deve retornar a view usuarios/edit.ejs passando para ela
+      as informações do usuário identificado pelo id (passado na rota)
+
+    ☐ Criar a view usuarios/edit.ejs
+      Essa view deve mostrar um formulário com os campos de informações de usuário
+      preenchidos excetuando o campo de senha, permitindo assim que o usuário altere
+      as próprias informações. Esse formulário poderá ser submetido via metodo PUT
+      para a rota /adm/usuarios/:id . Lembre de que isso é feito usando o método POST no
+      formulário e adicionando o ?_method=PUT à rota para onde o form será direcionado.
+      Vide: http://expressjs.com/en/resources/middleware/method-override.html
+
+    ☐ Criar uma rota put /adm/usuarios/:id
+      Essa rota deve direcionar a requisição para o controller UsuariosController.update
+
+    ☐ Criar um controller UsuariosController.update
+      Esse controller deve receber as informações do usuário que e atualizá-las no arquivo
+      usuarios.json. Depois disso, direcionar o visitante para a rota /adm/usuarios
+
+    ☐ 
+    ☐ Criar rota e controller para remoção de um usuário.
+    ☐ Proteger as rotas do crud de usuários com o middleware VerificaUsuarioLogado
+
+Menu interno:
+☐ Fazer com que o menu da área interna apareça nas telas de usuários
+☐ Fazer com que o menu interno receba como parâmetro o link selecionado para que ele possa destacar o respectivo
+
+Lista de Pizzas - Página inicial:
+☐ Fazer com que, ao clicar no botão add da pizza ela seja adicionada ao carrinho do cliente (req.session.idPizzasa)
+☐ Fazer um link na página inicial apontando para get /carrinho
+☐ Mostrar no link para a página de carrinho a quantidade de pizzas que o cliente tem no carrinho
+☐ Fazer uma view mostrando o que o visitante tem no carrinho
+
+Carrinho:
+☐ Mostrar na view de /carrinho:
+    - Os itens do carrinho numa tabela
+    - O valor total da compra
+    - Um link para finalizar a compra (apontando para /checkout)
+    - Um link para o cliente continuar comprando
+☐ Fazer com que o cliente possa excluir um item do carrinho
+☐ Exibir valor total da compra
+
+Checkout:
+☐ Criar uma rota get para "/entrar". Essa rota deve direcionar a req para ClientesController.entrar
+☐ ClientesController.entrar deve enviar uma view contendo dois forms:
+    - O de login, que submete um post para "/login" e será encaminhado para ClientesController.login
+    - O de cadastro, que submete um post para "/cadastrar" e será encaminhado para ClientesController.store
+☐ ClientesController.store deve
+    - criar cliente
+    - setar session com os dados do cliente (req.session.cliente);
+    - direcionar para a inicial "/",
+☐ ClientesController.login deve testar se o cliente existe
+    - Se sim, setar session com os dados do cliente (req.session.cliente) e direcionar para "/"
+    - Se não, redirecionar para "/entrar" com uma mensagem de falha no login
+
+☐ Exibir o nome do cliente na página incial, indicando para o visitante que ele está logado
+
+☐ Criar uma rota get /checkout. Essa rota deve ter um middleware que verifique se o cliente está logado
+    - Caso esteja logado, utilize o next() para executar a próxima função na cadeia de middlewares
+    - Caso não esteja logado direcionar para a rota "/entrar"
+☐ A rota get para "/checkout" direciona req para CheckoutController.show
+☐ CheckoutController.show envia uma view que mostra detalhes do pedido do cliente com e exibe um botão para ele confirmar o pedido
+☐ O botão submete um form post para "/checkout". A rota post "/checkout" direciona a req para CheckoutController.process
+☐ CheckoutController.process deve:
+    - criar um pedido no servidor com status pendente.
+    - limpar a session de pizzasId do usuário (delete req.session.pizzasId);
+    - enviar uma view exibindo uma mensagem de sucesso
+
+Pedidos:
+☐ Criar uma rota get "/pedidos" que só pode ser acessada por um usuário logado
+☐ A rota direciona para PedidosController.list, que deve carregar os pedidos e retornar uma view que liste os pedidos
+☐ Essa view deve permitir que o usuário altere o status do pedido de um pedido de pendente para realizado e vice-versa
+☐ Essa view deve receber uma query string para determinar se deve listar epdidos de todos os status, somente pendentes ou somente realizados

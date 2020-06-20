@@ -26,20 +26,42 @@ Estruturas de Controle:
         ✔ find @done(20-06-06 12:33)
         ☐ findIndex
         ✔ filter @done(20-06-06 12:33)
-        ☐ map
-        ☐ reduce
+        ✔ map @done(20-06-13 10:50)
+        ✔ reduce @done(20-06-13 11:46)
         ☐ forEach
 
 // Node - Aula 3 - (20/6)
-    NPM - Gerenciador de Pacotes:
+    NPM - Node Package Manager: Gerenciador de Pacotes:
 
     Arquitetura Cliente-Servidor:
-        ☐ Métodos HTTP (GET/POST/PUT/DELETE/PATCH)
         ☐ HTTP - estrutura de uma requisição/resposta
+        ☐ Estrutura MVC
+        ☐ Métodos HTTP (GET/POST/PUT/DELETE/PATCH)
         ☐ Express
 
+            ☐ Configurar uma rota
+            const express = require('express');
+            const router = express.Router();
+            router.get('',()=>{});
+            module.exports = router;
+
+            ☐ Setup do Template Engine (ejs)
+            app.set('views', path.join(__dirname, 'views'));
+            app.set('view engine', 'ejs');
+
+            ☐ Pasta pública
+            app.use(express.static(path.join(__dirname, 'public')));
+            
+            ☐ Parsing de body
+            app.use(express.json());
+            app.use(express.urlencoded({ extended: false }));
+
+            ☐ Method override
+            app.use(methodOverride('_method'));
+            
+
     Padrão MVC com Express:
-        ☐ Estrutura MVC
+        
         ☐ Template Engines (Views: EJS)
         ☐ Models (sequelize)
         ☐ Express Generator

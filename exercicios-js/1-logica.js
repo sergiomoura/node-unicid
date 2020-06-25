@@ -13,11 +13,7 @@ a - Num carro, o sistema de sensores é capaz de dizer quantos litros de combust
 */
 
 function autonomia(volumeCombustivel, rendimento){
-
-    // ...
-    // seu código vem aqui
-    // ...
-
+    return volumeCombustivel * rendimento;
 }
 
 /*
@@ -37,9 +33,10 @@ function alertarAutonomia(autonomia){
 
 function disparaAlertaAutonomia(volumeCombustivel, rendimento){
     
-    // ...
-    // seu código vem aqui!
-    // ...
+    let a = autonomia(volumeCombustivel, rendimento);
+    if(a < autonomiaMinima){
+        alertarAutonomia(a);
+    }
 
 }
 
@@ -62,9 +59,23 @@ const rendimentoAlcool = 12; // em quilômetros por litro
 
 function alcoolOuGasolina(precoDoAlcool, precoDaGasolina){
     
-    // ...
-    // seu código vem aqui!
-    // ...
+    let reaisPorKmDeGasolina = precoDaGasolina/rendimentoGasolina;
+    let reaisPorKmDeAlcool = precoDoAlcool/rendimentoAlcool;
+
+    if(reaisPorKmDeAlcool > reaisPorKmDeGasolina){
+        return "Gasolina";
+    } else {
+        return "Álcool";
+    }
 
 }
 
+// TESTE a)
+console.log(autonomia(10, 12));
+
+// TESTE b)
+disparaAlertaAutonomia(4, 12);
+
+// TESTE c)
+
+console.log(alcoolOuGasolina(3.5, 4.5));

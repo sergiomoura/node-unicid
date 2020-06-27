@@ -52,12 +52,20 @@ Estruturas de Controle:
             ✔ Pasta pública @done(20-06-20 11:58)
             app.use(express.static(path.join(__dirname, 'public')));
             
+            ☐ As formas de envio de informações do cliente para o sevidor
+            via GET, via POST, via Parâmetros de Rota
+
             ☐ Parsing de body
             app.use(express.json());
             app.use(express.urlencoded({ extended: false }));
 
-            ☐ Method override
-            app.use(methodOverride('_method'));
+            ☐ Criando um novo usuário
+
+            ☐ Removendo um novo usuário
+            Method override: app.use(methodOverride('_method'));
+
+            ☐ Alterando um novo usuário
+
             
 
     Padrão MVC com Express:

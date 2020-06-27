@@ -16,9 +16,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Importar roteadores
 const PizzasRouter = require("./routers/PizzasRouter");
+const UsuariosRouter = require("./routers/UsuariosRouter");
 
 // Utilizar roteadores
 app.use(PizzasRouter);
+app.use(UsuariosRouter);
+
 
 
 app.listen(3001);

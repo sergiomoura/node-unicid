@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 
 // Setup da pasta de arquivos estáticos
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.urlencoded({ extended: false }));
 
 // Importar roteadores
 const PizzasRouter = require("./routers/PizzasRouter");

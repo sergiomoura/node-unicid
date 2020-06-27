@@ -13,6 +13,9 @@
     "node",
     "express"
   ],
+  "nodemonConfig": {
+    "ignore": ["database/*.json"]
+  },
   "author": "Sérgio Moura",
   "license": "ISC",
   "dependencies": {

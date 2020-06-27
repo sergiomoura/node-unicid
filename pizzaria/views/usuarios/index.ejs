@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+    
     <link rel="stylesheet" href="/css/index-usuarios.css">
     <main>
         <a href="/adm/usuarios/create">Adicionar Usuário</a>
@@ -21,15 +22,17 @@
                 </tr>
             </thead>
             <tbody>
+                <% for(u of usuarios) { %>
                 <tr>
-                    <td>1</td>
-                    <td>Sérgio Moura</td>
-                    <td>smouracalmon@gmail.com</td>
+                    <td><%= u.id %></td>
+                    <td><%= u.nome %></td>
+                    <td><%= u.email %></td>
                     <td>
                         <button>Remover</button>
-                        <a href="/adm/usuarios/1/edit">Editar</a>
+                        <a href="/adm/usuarios/<%= u.id %>/edit">Editar</a>
                     </td>
                 </tr>
+                <% } %>
             </tbody>
         </table>
     </main>
